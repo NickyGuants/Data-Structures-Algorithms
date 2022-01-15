@@ -11,6 +11,7 @@ public class Array {
 
     //methods to manipulate the Dynamic array
     //insert an element at the end of the array
+    //Time complexity O(1)
     public void insert(int value){
         //check if array is full
         if(isFull()){
@@ -21,6 +22,7 @@ public class Array {
     }
 
     //Insert an element at the middle(anywhere but the last index)
+    //Time complexity O(n)
     public void insertMiddle(int value, int index){
         if (isFull()){
             createNewArray();
@@ -33,6 +35,7 @@ public class Array {
     }
 
     //Remove an element
+    //Time Complexity O(n)
     public void removeAt(int index){
         if(index < 0 || index >=count){
             throw new IllegalArgumentException();
@@ -41,6 +44,28 @@ public class Array {
                 items[i]=items[i+1];
         }
         count--;
+    }
+
+    //search by value (Find the index of a certain value)
+    //Time complexity O(n)
+    public int indexOf(int value){
+        for(int i=0; i< items.length; i++){
+            if(items[i]==value){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    //Return true or false if value exists
+    //Time complexity O(n)
+    public Boolean contains(int value){
+        for (int i=0; i< items.length; i++){
+            if(items[i]==value){
+                return true;
+            }
+        }
+       return false;
     }
 
     //private methods to check if the array is full and creating a new larger array.

@@ -9,8 +9,10 @@ public class Main {
         numbers.insertMiddle(15,1);
         numbers.insertMiddle(5, 0);
         numbers.insert(25);
-        numbers.removeAt(5);
+        //numbers.removeAt(5);
 
+        System.out.println(numbers.indexOf(25));
+        System.out.println(numbers.contains(25));
         numbers.print();
     }
 }
