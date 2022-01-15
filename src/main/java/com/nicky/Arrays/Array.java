@@ -32,6 +32,17 @@ public class Array {
         count++;
     }
 
+    //Remove an element
+    public void removeAt(int index){
+        if(index < 0 || index >=count){
+            throw new IllegalArgumentException();
+        }
+        for (int i=index; i< count; i++){
+                items[i]=items[i+1];
+        }
+        count--;
+    }
+
     //private methods to check if the array is full and creating a new larger array.
     private Boolean isFull(){
         return count == items.length;
@@ -44,7 +55,6 @@ public class Array {
         }
         items=newItems;
     }
-
     //implement a method to print out the array elements
     public void print(){
         //Iterate over the array and print each element
