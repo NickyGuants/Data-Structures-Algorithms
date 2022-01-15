@@ -60,8 +60,8 @@ public class Array {
     //Return true or false if value exists
     //Time complexity O(n)
     public Boolean contains(int value){
-        for (int i=0; i< items.length; i++){
-            if(items[i]==value){
+        for (int item : items) {
+            if (item == value) {
                 return true;
             }
         }
