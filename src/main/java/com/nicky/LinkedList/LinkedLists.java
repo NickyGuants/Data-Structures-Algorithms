@@ -50,6 +50,27 @@ public class LinkedLists {
         count--;
     }
 
+    public void deleteLast(){
+        Node prevNode= getPreviousNode(tail);
+        if(prevNode==null){
+            throw new NullPointerException();
+        }
+        tail=prevNode;
+        prevNode.next=null;
+        count--;
+    }
+
+    private Node getPreviousNode(Node node){
+        Node current = head;
+        while (current !=null){
+            if(current.next==node) {
+                return current;
+            }
+            current=current.next;
+        }
+        return null;
+    }
+
     public void print(){
         Node temp=head;
         if(head==null){

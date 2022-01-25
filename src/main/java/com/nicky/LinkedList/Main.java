@@ -8,6 +8,7 @@ public class Main {
         list.addLast(15);
         list.addLast(20);
         list.deleteFirst();
+        list.deleteLast();
         list.print();
     }
 }
