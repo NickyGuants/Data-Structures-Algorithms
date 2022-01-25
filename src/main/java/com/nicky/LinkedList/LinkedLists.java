@@ -41,4 +41,16 @@ public class LinkedLists {
             count++;
         }
     }
+
+    public void print(){
+        Node temp;
+        if(head==null){
+            throw new NullPointerException();
+        }
+        temp=head;
+        while (temp != null){
+            System.out.println(temp.value);
+            temp=temp.next;
+        }
+    }
 }
