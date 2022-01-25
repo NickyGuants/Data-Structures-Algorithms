@@ -60,6 +60,21 @@ public class LinkedLists {
         count--;
     }
 
+    public int indexOf(int item){
+        Node current = head;
+        int index=0;
+        if (isEmpty()){
+            throw new NullPointerException();
+        }
+        while (current != null){
+            if(current.value==item){
+                return index;
+            }
+            current=current.next;
+            index++;
+        }
+        return -1;
+    }
     public Boolean contains(int value){
         Node current = head;
         if(head==null){
@@ -85,6 +100,9 @@ public class LinkedLists {
         return null;
     }
 
+    private Boolean isEmpty(){
+        return head ==null;
+    }
     public void print(){
         Node temp=head;
         if(head==null){
