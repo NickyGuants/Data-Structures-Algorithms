@@ -7,11 +7,12 @@ public class Main {
         list.addFirst(5);
         list.addLast(15);
         list.addLast(25);
-        list.addMiddle(20, 2);
-        list.deleteFirst();
-        list.deleteLast();
-        System.out.println(list.indexOf(25));
-        System.out.println(list.contains(20));
+        //list.addMiddle(20, 2);
+//        list.deleteFirst();
+//        list.deleteLast();
+        list.deleteMiddle(15);
+//        System.out.println(list.indexOf(25));
+//        System.out.println(list.contains(20));
         list.print();
     }
 }

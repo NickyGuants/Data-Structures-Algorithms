@@ -47,6 +47,7 @@ public class LinkedLists {
         Node current = head;
         int index=0;
         //Traverse the list to the element at position-1
+        //O(n^2)
         while (current != null){
             if(index==position){
                 Node prevNode =getPreviousNode(current);
@@ -75,6 +76,17 @@ public class LinkedLists {
         tail=prevNode;
         prevNode.next=null;
         count--;
+    }
+
+    public void deleteMiddle(int item){
+        Node current = head;
+        while(current.next != null){
+            if(current.next.value==item){
+                current.next=current.next.next;
+                count--;
+            }
+            current=current.next;
+        }
     }
 
     public int indexOf(int item){
