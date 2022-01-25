@@ -5,5 +5,6 @@ public class Main {
         LinkedLists list = new LinkedLists();
         list.addFirst(10);
         list.addFirst(5);
+        list.addLast(15);
     }
 }

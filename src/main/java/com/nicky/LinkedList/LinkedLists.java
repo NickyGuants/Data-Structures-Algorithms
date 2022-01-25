@@ -1,7 +1,6 @@
 package com.nicky.LinkedList;
 
 public class LinkedLists {
-
     private class Node{
         private int value;
         private Node next;
@@ -26,6 +25,20 @@ public class LinkedLists {
             head=node;
             count++;
         }
+    }
 
+    public void addLast(int item){
+        //create a new node
+        Node node = new Node(item);
+        //check for the edge case
+        if(head==null){
+            head=node;
+            tail=node;
+            count++;
+        }else{
+            tail.next=node;
+            tail= node;
+            count++;
+        }
     }
 }
