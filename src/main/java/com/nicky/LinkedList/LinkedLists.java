@@ -42,6 +42,23 @@ public class LinkedLists {
         }
     }
 
+    public void addMiddle(int item,int position){
+        Node node = new Node(item);
+        Node current = head;
+        int index=0;
+        //Traverse the list to the element at position-1
+        while (current != null){
+            if(index==position){
+                Node prevNode =getPreviousNode(current);
+                prevNode.next=node;
+                node.next=current;
+                count++;
+            }
+            current=current.next;
+            index++;
+        }
+    }
+
     public void deleteFirst(){
         if(head==null){
             throw new NullPointerException();

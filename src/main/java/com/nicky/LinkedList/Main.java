@@ -6,7 +6,8 @@ public class Main {
         list.addFirst(10);
         list.addFirst(5);
         list.addLast(15);
-        list.addLast(20);
+        list.addLast(25);
+        list.addMiddle(20, 2);
         list.deleteFirst();
         list.deleteLast();
         System.out.println(list.indexOf(25));
