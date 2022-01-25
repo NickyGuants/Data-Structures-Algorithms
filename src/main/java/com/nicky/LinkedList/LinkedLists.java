@@ -42,12 +42,19 @@ public class LinkedLists {
         }
     }
 
-    public void print(){
-        Node temp;
+    public void deleteFirst(){
         if(head==null){
             throw new NullPointerException();
         }
-        temp=head;
+        head= head.next;
+        count--;
+    }
+
+    public void print(){
+        Node temp=head;
+        if(head==null){
+            throw new NullPointerException();
+        }
         while (temp != null){
             System.out.println(temp.value);
             temp=temp.next;
