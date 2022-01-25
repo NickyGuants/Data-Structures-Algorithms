@@ -1,4 +1,4 @@
-package com.nicky.PracticeQuestions;
+package com.nicky.PracticeQuestions.Arrays;
 
 //Java solution for two sum
 public class TwoSum {

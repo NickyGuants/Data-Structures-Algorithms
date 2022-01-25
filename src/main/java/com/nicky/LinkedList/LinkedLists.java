@@ -118,6 +118,21 @@ public class LinkedLists {
         return false;
     }
 
+    //Time complexity O(n)
+    public void reverse(){
+        Node current = head;
+        Node prev=null;
+        Node next;
+        while (current != null){
+            next=current.next;
+            current.next=prev;
+            prev=current;
+            current=next;
+        }
+        tail=head;
+        head=prev;
+    }
+
     private Node getPreviousNode(Node node){
         Node current = head;
         while (current !=null){

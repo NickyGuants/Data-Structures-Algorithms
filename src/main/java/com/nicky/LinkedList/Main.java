@@ -10,9 +10,10 @@ public class Main {
         //list.addMiddle(20, 2);
 //        list.deleteFirst();
 //        list.deleteLast();
-        list.deleteMiddle(15);
+        //list.deleteMiddle(15);
 //        System.out.println(list.indexOf(25));
 //        System.out.println(list.contains(20));
+       list.reverse();
         list.print();
     }
 }
