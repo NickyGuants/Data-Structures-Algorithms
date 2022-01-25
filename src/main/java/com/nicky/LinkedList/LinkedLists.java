@@ -60,6 +60,20 @@ public class LinkedLists {
         count--;
     }
 
+    public Boolean contains(int value){
+        Node current = head;
+        if(head==null){
+            throw new NullPointerException();
+        }
+        while (current != null){
+            if(current.value==value) {
+                return true;
+            }
+            current= current.next;
+        }
+        return false;
+    }
+
     private Node getPreviousNode(Node node){
         Node current = head;
         while (current !=null){

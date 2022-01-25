@@ -9,6 +9,7 @@ public class Main {
         list.addLast(20);
         list.deleteFirst();
         list.deleteLast();
+        System.out.println(list.contains(20));
         list.print();
     }
 }
