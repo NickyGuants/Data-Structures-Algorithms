@@ -68,6 +68,15 @@ public class Array {
        return false;
     }
 
+    public void reverse(){
+        int temp;
+        for (int i=0; i<items.length/2; i++){
+            temp=items[i];
+            items[i]=items[count-i-1];
+            items[count-1-i]=temp;
+        }
+    }
+
     //private methods to check if the array is full and creating a new larger array.
     private Boolean isFull(){
         return count == items.length;
