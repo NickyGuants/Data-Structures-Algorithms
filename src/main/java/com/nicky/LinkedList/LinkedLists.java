@@ -78,6 +78,19 @@ public class LinkedLists {
         count--;
     }
 
+    public int nthNode(int n){
+        Node current=head;
+        Node slower = head;
+       for (int i=0; i<n-1; i++){
+           current=current.next;
+       }
+        while (current != tail){
+            current = current.next;
+            slower = slower.next;
+        }
+        return slower.value;
+    }
+
     public void deleteMiddle(int item){
         Node current = head;
         while(current.next != null){
