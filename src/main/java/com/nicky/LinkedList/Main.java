@@ -14,7 +14,8 @@ public class Main {
 //        System.out.println(list.indexOf(25));
 //        System.out.println(list.contains(20));
         System.out.println(list.nthNode(2));
+        list.removeNthNode(2);
 //       list.reverse();
-//        list.print();
+        list.print();
     }
 }

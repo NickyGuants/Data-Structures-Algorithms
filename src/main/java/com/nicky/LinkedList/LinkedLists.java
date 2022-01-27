@@ -90,6 +90,18 @@ public class LinkedLists {
         }
         return slower.value;
     }
+    public void removeNthNode(int n){
+        Node current=head;
+        Node slower = head;
+        for (int i=0; i<n; i++){
+            current=current.next;
+        }
+        while (current != tail){
+            current = current.next;
+            slower = slower.next;
+        }
+        slower.next=slower.next.next;
+    }
 
     public void deleteMiddle(int item){
         Node current = head;
