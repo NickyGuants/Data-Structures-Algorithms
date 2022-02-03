@@ -15,10 +15,8 @@ public class ReverseArray {
 
     //using two pointers
     public static void reverseTwoPointer(int [] nums){
-        int temp;
         int i=0;
         int j= nums.length-1;
-
         while (i<j){
             swap(nums, i, j);
             i++;
@@ -35,8 +33,8 @@ public class ReverseArray {
 
     public static void main(String [] args){
         int [] nums= {1,2,3,4,5,6};
-        //ReverseArray.reverse(nums);
-        //System.out.println(Arrays.toString(nums));
+        ReverseArray.reverse(nums);
+        System.out.println(Arrays.toString(nums));
         ReverseArray.reverseTwoPointer(nums);
         System.out.println(Arrays.toString(nums));
     }
