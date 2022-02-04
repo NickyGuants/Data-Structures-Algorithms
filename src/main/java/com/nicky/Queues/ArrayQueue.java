@@ -14,9 +14,10 @@ public class ArrayQueue {
 
     //add items to the queue
     public void enqueue(int item){
-        if(count == items.length) throw new IllegalStateException();
+        if(count == items.length)
+            throw new IllegalStateException();
         items[rear]=item;
-        rear=(rear+1) % items.length;
+        rear=(rear+1) % items.length; //circular arrays
         count++;
     }
 
@@ -24,9 +25,21 @@ public class ArrayQueue {
     public int dequeue(){
         var item= items[first];
         items[first]=0;
-        first=(first+1) &items.length;
+        first=(first+1) &items.length; //circular arrays
         count--;
         return item;
+    }
+
+    public Boolean isEmpty(){
+        return count==0;
+    }
+
+    public int peek(){
+        return items[first];
+    }
+
+    public Boolean isFull(){
+        return items.length==count;
     }
 
     @Override
