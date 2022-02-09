@@ -7,29 +7,24 @@ import java.util.Set;
 
 public class Main {
     public static void main(String [] args){
-        //key
-        //value
-//        Map<Integer, String> map = new HashMap<>();
-//        map.put(1, "Nicky");
-//        map.put(2, "Guantai");
-//        map.put(3,"Tembe");
-//        map.put(4, "Tembe");
-//        var val = map.get(3);
 //
-//        System.out.println(map.containsValue("Tembe"));
-//        for (var item: map.entrySet()){
-//            System.out.println(item.getValue());
+//        System.out.println(findNonRepeatingChar("green apple"));
+//        System.out.println(firstRepeatingChr("Green apple"));
+//
+//        Set<Integer> set = new HashSet<>();
+//        int[] numbers={1,2,3,4,4,5,5,6,6,1,2,3,4};
+//        for (var num: numbers){
+//            set.add(num);
 //        }
 
-        System.out.println(findNonRepeatingChar("green apple"));
-        System.out.println(firstRepeatingChr("Green apple"));
+        HashTable table = new HashTable();
+        table.put(6, "A");
+        table.put(8, "B");
+        table.put(11, "C");
+        table.put(6, "D");
+        table.remove(6);
 
-        Set<Integer> set = new HashSet<>();
-        int[] numbers={1,2,3,4,4,5,5,6,6,1,2,3,4};
-        for (var num: numbers){
-            set.add(num);
-        }
-        //System.out.println(set);
+        System.out.println("Done");
     }
 
     public static char findNonRepeatingChar(String str){
