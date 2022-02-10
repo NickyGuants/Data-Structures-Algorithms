@@ -39,5 +39,21 @@ public class Tree {
         }
     }
 
+    public boolean find(int value){
+        var current = root;
+        if (root==null){
+            return false;
+        }
 
+        while (current != null){
+            if (value <current.value){
+                current=current.left;
+            }else if(value > current.value){
+                current=current.right;
+            }else {
+                return true;
+            }
+        }
+        return false;
+    }
 }
