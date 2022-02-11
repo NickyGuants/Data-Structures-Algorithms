@@ -56,4 +56,52 @@ public class Tree {
         }
         return false;
     }
+
+    public void traversePreOrder(){
+        traversePreOrder(root);
+    }
+    public void traverseInOrder(){
+        traverseInOrder(root);
+    }
+    public void traversePostOrder(){
+        traversePostOrder(root);
+    }
+
+    public int height(){
+        return height(root);
+    }
+    private void traversePreOrder(Node root){
+        //base condition
+        if (root == null) return;
+        //visit root(print)
+        //visit left and the right.
+        //use recursion in step 2.(call the method on itself.
+        System.out.println(root.value);
+        traversePreOrder(root.left);
+        traversePreOrder(root.right);
+    }
+
+    private void traverseInOrder(Node root){
+        //base condition
+        if (root == null) return;
+        traverseInOrder(root.left);
+        System.out.println(root.value);
+        traverseInOrder(root.right);
+    }
+
+    private void traversePostOrder(Node root){
+        if (root == null) return;
+
+        traversePostOrder(root.left);
+        traversePostOrder(root.right);
+        System.out.println(root.value);
+    }
+
+    private int height(Node root){
+        if (root== null) return -1;
+
+        if (root.left == null && root.right==null) return 0;
+
+        return 1+Math.max(height(root.left), height(root.right));
+    }
 }
