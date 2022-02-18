@@ -20,9 +20,9 @@ public class Heap {
     public int remove(){
         if (isEmpty()) throw new IllegalStateException();
         //move value of the last node to the first node
-        items[0]=items[--size];
         var root = items[0];
-        //size--;
+        items[0]=items[--size];
+
         //execute bubble down operation ie. if item(root)<children then bubble down
         bubbleDown();
         return root;
