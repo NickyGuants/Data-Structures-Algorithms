@@ -12,13 +12,20 @@ public class ListCycle {
       }}
 
     public Boolean hasCycle (ListNode head){
-        HashMap<Integer, ListNode> map = new HashMap<>();
+       ListNode slow=head;
+       ListNode fast = head;
 
-        while (head !=null){
-            map.put(head.val, head.next);
-            head=head.next;
-        }
-
+       //no items in the list so no cycle
+       if (head == null) return false;
+       //just one node in the list so no cycle
+       if (head.next == null) return false;
+       while (fast != null && fast.next != null){
+           slow=slow.next;
+           fast=fast.next.next;
+           if (slow==fast){
+               return true;
+           }
+       }
     return false;
     }
 
