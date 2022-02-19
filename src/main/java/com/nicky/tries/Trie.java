@@ -7,7 +7,7 @@ public class Trie {
     private class Node{
         private char value;
         private Node[] children = new Node[ALPHABET_SIZE];
-        //private HashMap<Character, Node> hashChildren = new HashMap<>();
+        private HashMap<Character, Node> hashChildren = new HashMap<>();
         private Boolean isEndOfWord;
 
         public Node(char value){
@@ -40,5 +40,16 @@ public class Trie {
     }
 
 
+    //using a hashmap less space required
+    public void insertUsingHashTable(String word){
+        var current = root;
+        for (var ch: word.toCharArray()){
+            if (current.hashChildren.get(ch)==null){
+                current.hashChildren.put(ch, new Node(ch));
+            }
+            current=current.hashChildren.get(ch);
+        }
+        current.isEndOfWord=true;
+    }
 
 }
