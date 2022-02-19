@@ -20,9 +20,9 @@ public class Trie {
 
         }
 
-//        public Node[] getChidren(){
-//            return hashChildren.values().toArray(new Node[0]);
-//        }
+        public Node[] getChidren(){
+            return hashChildren.values().toArray(new Node[0]);
+        }
     }
     private Node root = new Node(' ');
 
@@ -64,5 +64,19 @@ public class Trie {
         return current.isEndOfWord;
     }
 
+    public void traverse(){
+        traverse(root);
+    }
+    private void traverse(Node root){
+        //pre-order
+        System.out.println(root.value);
+
+        for (var child: root.getChidren()){
+            traverse(child);
+        }
+
+        //post-order
+        //System.out.println(root.value);
+    }
 
 }
