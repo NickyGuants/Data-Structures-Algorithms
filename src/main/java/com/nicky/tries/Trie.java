@@ -52,4 +52,17 @@ public class Trie {
         current.isEndOfWord=true;
     }
 
+    public boolean contains(String word){
+        if (word==null) return false;
+        var current = root;
+        for (var ch: word.toCharArray()){
+            if (current.hashChildren.get(ch)==null){
+                return false;
+            }
+            current=current.hashChildren.get(ch);
+        }
+        return current.isEndOfWord;
+    }
+
+
 }
