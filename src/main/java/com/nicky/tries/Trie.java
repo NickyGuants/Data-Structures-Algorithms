@@ -23,6 +23,25 @@ public class Trie {
         public Node[] getChidren(){
             return hashChildren.values().toArray(new Node[0]);
         }
+
+        public boolean hasChild(char ch){
+            return hashChildren.containsKey(ch);
+        }
+
+        public Node getChild(char ch){
+            return hashChildren.get(ch);
+        }
+        public void addChild(char ch){
+            hashChildren.put(ch, new Node(ch));
+        }
+
+        public boolean hasChildren(){
+            return !hashChildren.isEmpty();
+        }
+
+        public void removeChild(char ch){
+            hashChildren.remove(ch);
+        }
     }
     private Node root = new Node(' ');
 
@@ -38,8 +57,6 @@ public class Trie {
         }
         current.isEndOfWord=true;
     }
-
-
     //using a hashmap less space required
     public void insertUsingHashTable(String word){
         var current = root;
@@ -67,6 +84,7 @@ public class Trie {
     public void traverse(){
         traverse(root);
     }
+
     private void traverse(Node root){
         //pre-order
         System.out.println(root.value);
@@ -79,4 +97,27 @@ public class Trie {
         //System.out.println(root.value);
     }
 
+    public void remove(String word){
+        if (word==null){
+            return;
+        }
+        remove(root, word, 0);
+    }
+
+    private void remove(Node root, String word, int index){
+        if (index==word.length()){
+            root.isEndOfWord=false;
+            return;
+        }
+
+        var ch = word.charAt(index);
+        var child =root.getChild(ch);
+        if (child==null){
+            return;
+        }
+        remove(child, word, index+1);
+        if (!child.hasChildren() && !child.isEndOfWord){
+            root.removeChild(ch);
+        }
+    }
 }

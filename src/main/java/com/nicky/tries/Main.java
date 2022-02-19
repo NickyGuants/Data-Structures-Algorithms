@@ -3,11 +3,12 @@ package com.nicky.tries;
 public class Main {
     public static void main(String [] args){
         Trie trie = new Trie();
-        trie.insertUsingHashTable("cat");
-        trie.insertUsingHashTable("can");
+        trie.insertUsingHashTable("car");
+        trie.insertUsingHashTable("care");
 
-        System.out.println(trie.contains("canadn"));
-
-        trie.traverse();
+        //trie.traverse();
+        trie.remove(null);
+        System.out.println(trie.contains("car"));
+        System.out.println(trie.contains("car"));
     }
 }
