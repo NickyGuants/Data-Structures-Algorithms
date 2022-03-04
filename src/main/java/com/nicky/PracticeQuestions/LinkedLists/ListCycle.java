@@ -1,9 +1,7 @@
 package com.nicky.PracticeQuestions.LinkedLists;
 
-import java.util.HashMap;
-
 public class ListCycle {
-    class ListNode {
+    static class ListNode {
       int val;
       ListNode next;
       ListNode(int x) {
@@ -11,7 +9,7 @@ public class ListCycle {
           next = null;
       }}
 
-    public Boolean hasCycle (ListNode head){
+    public static Boolean hasCycle (ListNode head){
        ListNode slow=head;
        ListNode fast = head;
 
@@ -30,6 +28,8 @@ public class ListCycle {
     }
 
     public static void main(String [] args){
-        ListCycle listCycle = new ListCycle();
+        ListNode listNode = new ListNode(30);
+
+        System.out.println(hasCycle(listNode));
     }
 }
