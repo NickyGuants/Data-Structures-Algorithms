@@ -1,4 +1,4 @@
-package com.nicky.PracticeQuestions.Arrays.twopointers;
+package com.nicky.PracticeQuestions.Arrays.twoPointers;
 
 import java.util.Arrays;
 

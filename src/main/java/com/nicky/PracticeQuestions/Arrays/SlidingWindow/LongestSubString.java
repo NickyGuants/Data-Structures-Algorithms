@@ -1,4 +1,4 @@
-package com.nicky.PracticeQuestions.Arrays;
+package com.nicky.PracticeQuestions.Arrays.SlidingWindow;
 
 import java.util.HashSet;
 

@@ -1,4 +1,4 @@
-package com.nicky.PracticeQuestions.Arrays;
+package com.nicky.PracticeQuestions.Arrays.SlidingWindow;
 
 public class minSubArraySum {
     //Brute force approach
@@ -17,6 +17,7 @@ public class minSubArraySum {
         return min_len;
     }
 
+    //using sliding window technique
     public static int minLen(int target, int[] nums){
         int min_len = Integer.MAX_VALUE;
         int windowStart=0;

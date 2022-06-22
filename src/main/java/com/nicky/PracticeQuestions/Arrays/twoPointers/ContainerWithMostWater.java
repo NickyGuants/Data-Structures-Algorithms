@@ -1,4 +1,4 @@
-package com.nicky.PracticeQuestions.Arrays.twopointers;
+package com.nicky.PracticeQuestions.Arrays.twoPointers;
 
 //calculate the container with most water
 public class ContainerWithMostWater {
