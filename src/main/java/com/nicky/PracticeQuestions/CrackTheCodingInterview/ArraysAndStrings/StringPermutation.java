@@ -25,7 +25,6 @@ public class StringPermutation {
         for (char ch: b.toCharArray()) {
             charFrequency.put(ch, charFrequency.getOrDefault(ch, 0)+1);
         }
-        System.out.println(charFrequency);
 
         for(char ch: a.toCharArray()){
             if (charFrequency.containsKey(ch)){
@@ -36,7 +35,7 @@ public class StringPermutation {
             }else
                 return false;
         }
-        if (charFrequency.size()> 0){
+        if (charFrequency.size() > 0){
             return false;
         }
         return true;

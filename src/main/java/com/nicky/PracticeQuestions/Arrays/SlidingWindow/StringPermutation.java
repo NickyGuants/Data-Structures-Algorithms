@@ -3,6 +3,7 @@ package com.nicky.PracticeQuestions.Arrays.SlidingWindow;
 import java.util.HashMap;
 import java.util.Map;
 
+//A string x is a permutation of another string y if x contains same characters as y i a different order.
 public class StringPermutation {
     public static boolean checkIfStringsArePermutations(String str,  String pattern){
         int windowStart=0;
