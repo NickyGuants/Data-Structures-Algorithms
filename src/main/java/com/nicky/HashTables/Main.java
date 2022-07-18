@@ -17,14 +17,11 @@ public class Main {
 //            set.add(num);
 //        }
 
-        HashTable table = new HashTable();
-        table.put(6, "A");
-        table.put(8, "B");
-        table.put(11, "C");
-        table.put(6, "D");
-        table.remove(6);
+//       HashTable table = new HashTable<>();
+       int flight_length = 90;
+       int[] movie_lengths = {40, 60, 90, 70, 50};
 
-        System.out.println("Done");
+       System.out.println(inflightSys(flight_length, movie_lengths));
     }
 
     public static char findNonRepeatingChar(String str){
@@ -56,4 +53,18 @@ public class Main {
         return Character.MIN_VALUE;
     }
 
+    public static boolean inflightSys(int flight_length, int[] movie_lengths){
+        HashSet movieSet = new HashSet<>();
+//        for(int length: movie_lengths){
+//            movieSet.add(length);
+//        }
+
+        for (int i=0; i< movie_lengths.length; i++){
+            if (movieSet.contains(flight_length-movie_lengths[i])){
+                return true;
+            }
+            movieSet.add(movie_lengths[i]);
+        }
+        return false;
+    }
 }
